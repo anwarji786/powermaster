@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    width: 100%; /* Ensures the image spans the full width */
+    height: 300px; /* Adjust the height as desired */
+    object-fit: cover; /* Maintains aspect ratio and prevents distortion */
+}
+
+form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #607d8b;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #455a64;
+}
+
+section {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #607d8b;
+    cursor: pointer;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-item p {
+    margin: 0;
+    margin-right: 20px;
+}
+
+.product-item img {
+    margin-right: 10px;
+}
