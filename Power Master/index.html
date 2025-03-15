@@ -4,61 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Panel</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    
+    <!-- MDL & Custom Scripts -->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script defer src="app.js"></script>
 </head>
 <body>
-    <header class="mdl-layout__header">
-        <img src="https://i.postimg.cc/4yK8hRBd/Products.png" alt="Header Image" class="header-image">
-    </header>
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header">
+            <img src="https://i.postimg.cc/4yK8hRBd/Products.png" alt="Header Image" class="header-image">
+        </header>
 
-    <main>
-        <!-- User Details Form -->
-        <section id="userDetailsForm">
-            <h2>Enter Your Details</h2>
-            <form id="userForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
+        <main class="mdl-layout__content">
+            <!-- User Details Form -->
+            <section id="userDetailsForm">
+                <h2>Enter Your Details</h2>
+                <form id="userForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" required>
+                    
+                    <label for="email">Email (Optional):</label>
+                    <input type="email" id="email">
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <!-- Item Selection Section -->
+            <section id="itemSection" style="display: none;">
+                <h2>Select Items</h2>
                 
-                <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" required>
-                
-                <label for="email">Email (Optional):</label>
-                <input type="email" id="email">
-                
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+                <!-- Search Functionality -->
+                <div>
+                    <label for="searchItem">Search Item:</label>
+                    <input type="text" id="searchItem" placeholder="Enter item name">
+                    <button type="button" id="searchButton">Search</button>
+                </div>
 
-        <!-- Item Selection Section -->
-        <section id="itemSection" style="display: none;">
-            <h2>Select Items</h2>
-            <!-- Added Search Functionality -->
-            <div>
-                <label for="searchItem">Search Item:</label>
-                <input type="text" id="searchItem" placeholder="Enter item name">
-                <button id="searchButton">Search</button>
-            </div>
-            <!-- Item List with Selectable Items -->
-            <div id="itemList"></div>
-            <!-- New Button to Add Selected Items to Cart -->
-            <button id="addSelectedButton">Add Selected to Cart</button>
-            <button id="placeOrderButton">Place Order</button>
-        </section>
+                <!-- Item List -->
+                <div id="itemList"></div>
 
-        <!-- Navigation Bar -->
-        <nav class="mdl-navigation" style="display: none;" id="userNav">
-            <a href="#" class="mdl-navigation__link" id="profileMenu">Profile</a>
-            <a href="#" class="mdl-navigation__link" id="ordersMenu">Orders</a>
-        </nav>
+                <!-- Action Buttons -->
+                <button type="button" id="addSelectedButton">Add Selected to Cart</button>
+                <button type="button" id="placeOrderButton">Place Order</button>
+            </section>
 
-        <!-- Order Confirmation -->
-        <section id="orderSection" style="display: none;">
-            <h2>Order Placed</h2>
-            <p id="orderDetails"></p>
-        </section>
-    </main>
+            <!-- Navigation Bar -->
+            <nav class="mdl-navigation" style="display: none;" id="userNav">
+                <a href="#" class="mdl-navigation__link" id="profileMenu">Profile</a>
+                <a href="#" class="mdl-navigation__link" id="ordersMenu">Orders</a>
+            </nav>
+
+            <!-- Order Confirmation -->
+            <section id="orderSection" style="display: none;">
+                <h2>Order Placed</h2>
+                <p id="orderDetails"></p>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
